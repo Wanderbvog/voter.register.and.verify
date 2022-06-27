@@ -1,0 +1,31 @@
+#Test sample
+#Somehow for fun :)
+A. Successful register
+    1. Name: Pak Shun Hang Tyndale
+        ID_no: C198964(3)
+        Sex: M 
+        Birthdate: 2001-02-24
+        Phone: 69612831
+        Expected hash: 66b1c8cf3a116b1315949c8229a7caef012d8cf411358daaa37aff4963aa24deba94d6a0ab2554f19250fc6c8da395ef4229be21b0a6da92fa3d0f379277b222
+    2. Name: Pak Mong Hang Zwingli
+        ID_no: C198964(4)
+        Sex: M  
+        Birthdate: 2001-02-24
+        Phone: 72169728
+        Expected hash: 53e298114811d644012ab762278850643c36e2648a6b11467ab5d6e1e9f6dc0695764df1dbb89939b7f8797bc1ca2f904fcd82318c3c8c0887f5b94616c4b03f
+
+B. Failed register
+    
+    1. Name: Tang Shin Kwong Siegfeld
+        ID_no: Y204209(1)
+        Sex: M
+        Birthdate: 2020-10-25 (Age failure case)
+        Expected: "Our dear little future citizen, you are yet to reach the voting age, thanks but sorry" #Valid before 2038-10-25
+    2. Name: Pak Ho Hung Enjolras
+        ID_no: 235677423974 (ID_no failure, not yet released)
+        Expected: "Verification fail. Perhaps you are not our citizens"
+    3. Name: Lok Ying Sau Stormy
+        ID_no: Y000000(3)
+        Sex: L (gender input failure)
+        Expected: (After re-inputting 5 times)"Please go away, you troll!"
+    
