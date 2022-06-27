@@ -29,12 +29,7 @@ def voter_registry():
     print("Birth day")
     day=int(input())
     birthday = str(datetime.datetime(year, month, day))
-    age = today.year - year
-    condition = today.month - month
-    if condition >= 6 :
-        age += 1
-    elif condition <= -6 :
-        age -= 1
+    age = today.year - year - ((today.month, today.day) < (month, day))
     if age <18 :
         print("Our dear little future citizen, you are yet to reach the voting age, thanks but sorry") #Minimum voting age is 18 years old
         exit()
@@ -62,6 +57,7 @@ def voter_registry():
 
     #if verify_code == user_entered_verify_code.strip():
         #print("Your code is correct.")
+    #Should have also a open-question to answer as to make it hard to spoof(e.g. What is your favorite food?)
         string = name+id_no+gender+birthday+phone_no
     voter=hashlib.sha512(string.encode()).hexdigest()
     return voter 
@@ -69,7 +65,7 @@ def voter_registry():
         #print("Your code is incorrect.")
         #exit()
 VotR = "5e9a3ca94118a594072a10bea5d70d2a43bc38ecd9b82562a6c1adf5bd2da78bab3abbe15a37d9b99cc2a92041950075b280b479c4db4046acda8cc639e24d56"
-#"VotR" is the hash generated from the use case, which is supposed to be stored separatedly from the verification system
+#"VotR" is the hash generated from the use case, which is supposed to be stored separatedly from the verification system (in registry server)
 #Use case here:
 #Name = Pak Shun Hang Tyndale
 #ID_no = Z198964(3)
