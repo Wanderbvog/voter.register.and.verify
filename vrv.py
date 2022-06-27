@@ -64,11 +64,20 @@ def voter_registry():
         #print("Your code is correct.")
         string = name+id_no+gender+birthday+phone_no
     voter=hashlib.sha512(string.encode()).hexdigest()
-    print(voter) 
+    return voter 
     #else:
         #print("Your code is incorrect.")
         #exit()
-
+VotR = "5e9a3ca94118a594072a10bea5d70d2a43bc38ecd9b82562a6c1adf5bd2da78bab3abbe15a37d9b99cc2a92041950075b280b479c4db4046acda8cc639e24d56"
+#"VotR" is the hash generated from the use case, which is supposed to be stored separatedly from the verification system
+#Use case here:
+#Name = Pak Shun Hang Tyndale
+#ID_no = Z198964(3)
+#Gender = M
+#Year = 2000
+#Month = 04
+#Day = 17
+#Phone_No = 12345678
 def voter_verify():
     VerifyHash = voter_registry()
     if VerifyHash != VotR: #In reality, a request for matching hash should be sent to the registration database
@@ -79,16 +88,6 @@ def voter_verify():
         #Proceed to Voting page/Weighting registry
 #Main Entry
 #For Voting registration:
-voter_registry()
-#"VotR" is the hash generated from VoterRegistry(), which is supposed to be stored separatedly from the verification system, here I paste the hash generated from the Use case as a demo
-#Use case here:
-#Name = Pak Shun Hang Tyndale
-#ID_no = Z198964(3)
-#Gender = M
-#Year = 2000
-#Month = 04
-#Day = 17
-#Phone_No = 12345678
-VotR = "5e9a3ca94118a594072a10bea5d70d2a43bc38ecd9b82562a6c1adf5bd2da78bab3abbe15a37d9b99cc2a92041950075b280b479c4db4046acda8cc639e24d56" 
-#For Verification
-voter_verify()
+#voter_registry()
+#For voter verification:
+#voter_verify()
