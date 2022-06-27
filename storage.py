@@ -1,5 +1,5 @@
 #Let's see how should the voters' hash stored
-from vrv import *
+from vrv import voter_registry()
 hashlist=["hashes of registered voters"]; 
 counter = 3
 
