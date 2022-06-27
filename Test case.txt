@@ -13,10 +13,28 @@ A. Successful register
         Birthdate: 2001-02-24
         Phone: 72169728
         Expected hash: 53e298114811d644012ab762278850643c36e2648a6b11467ab5d6e1e9f6dc0695764df1dbb89939b7f8797bc1ca2f904fcd82318c3c8c0887f5b94616c4b03f
+    3. Name: Tang Yoek Fei
+        ID_no: Y201910(1)
+        Sex: M 
+        Birthdate: 1992-06-26
+        Phone: 11181108
+        Expected hash: 16b98d3841a7f6a078e792ac9571955d1d5f7b940b60cbfd01c92f787c423e6ececf868c2f8500a029f70d9123a1f298c17f661862b68563652042f8714db5fe
+    4. Name: Sun Yat Yip
+        ID_no: Y201983(1)
+        Sex: M
+        Birthdate: 1997-06-27
+        Phone: 62371613
+        Expected hash: ba942e04fde6fb8862109b4678bc5bfa9ff4d3dc75334005efee18610c2afa5bf04958e3e3a667d1bcda87d95d9eb857cc0d43eaa0374093ee772f94d0676a6b
+    5. Name: Wong Yau Ling
+        ID_no: Y616623(9)
+        Sex: F
+        Birthdate: 1971-04-13
+        Phone: 18410826
+        Expected hash: 94f5fdf2ddb55ede831c7365b8ecb1ea5efbb6bf8539e1cec5095268c4565edbc99a99c8f4fedbb1f17cb7bfbd7edb909c0bec0f7a6f6d0bbaf11676c5cdefae
 
 B. Failed register
     
-    1. Name: Tang Shin Kwong Siegfeld
+    1. Name: Tang Shin Kwong Siegfried
         ID_no: Y204209(1)
         Sex: M
         Birthdate: 2020-10-25 (Age failure case)
