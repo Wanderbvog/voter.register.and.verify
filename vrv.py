@@ -13,10 +13,15 @@ def voter_registry():
     print("M or F")
     gender = input().upper()
     checkGender=False
+    counter=5
     while not checkGender:#Should have a counter here to prevent abuse
         if gender != "M" and gender != "F":
             print("Try again, please enter M if you are male, and F if female")
+            counter-=1
             gender = input().upper()
+            if counter==0:
+                print("Please go away, you troll!")
+                exit()
         else: 
             checkGender=True
 
@@ -64,16 +69,15 @@ def voter_registry():
     #else:
         #print("Your code is incorrect.")
         #exit()
-VotR = "5e9a3ca94118a594072a10bea5d70d2a43bc38ecd9b82562a6c1adf5bd2da78bab3abbe15a37d9b99cc2a92041950075b280b479c4db4046acda8cc639e24d56"
-#"VotR" is the hash generated from the use case, which is supposed to be stored separatedly from the verification system (in registry server)
+VotR = "66b1c8cf3a116b1315949c8229a7caef012d8cf411358daaa37aff4963aa24deba94d6a0ab2554f19250fc6c8da395ef4229be21b0a6da92fa3d0f379277b222"
+#"VotR" is the hash generated from the use case as a demo to allow the function to run, which is supposed to be stored separatedly from the verification system
+#In reality, should be a request to the registry server to find the registered matching hash.
 #Use case here:
-#Name = Pak Shun Hang Tyndale
-#ID_no = Z198964(3)
-#Gender = M
-#Year = 2000
-#Month = 04
-#Day = 17
-#Phone_No = 12345678
+#Name: Pak Shun Hang Tyndale
+        #ID_no: C198964(3)
+        #Sex: M 
+        #Birthdate: 2001-02-24
+        #Phone: 69612831
 def voter_verify():
     VerifyHash = voter_registry()
     if VerifyHash != VotR: #In reality, a request for matching hash should be sent to the registration database
