@@ -45,7 +45,7 @@ def voter_registry():
     voter=hashlib.sha512(string.encode()).hexdigest()
     return voter 
   
-VotR = "66b1c8cf3a116b1315949c8229a7caef012d8cf411358daaa37aff4963aa24deba94d6a0ab2554f19250fc6c8da395ef4229be21b0a6da92fa3d0f379277b222"
+VotR = "a2e5795dbdd14c961aa75331d0e77ef9b068083fed3ca00eec47528b56cd8f8984b65d581100738bfc889742adac8bb244be1327a041782c0fbb743c33ecc2fd"
 #"VotR" is the hash generated from the use case as a demo to allow the function to run, which is supposed to be stored separatedly from the verification system
 #In reality, should be a request to the registry server to find the registered matching hash.
 #Use case here:
